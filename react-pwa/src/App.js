@@ -1,5 +1,6 @@
 import React from 'react';
-import logo from './logo.svg';
+import Button from '@material-ui/core/Button'
+import logo from './xandr-logo.svg';
 import './App.css';
 
 function App() {
@@ -7,18 +8,39 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
+      </header>
+      <div className="App-body" alt="buttonGroup">
+        <Button
+          className="App-button"
+          variant="contained"
+          color="primary"
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
-        </a>
-      </header>
+          Get Started
+        </Button>
+        <Button
+          className="App-button"
+          variant="contained"
+          color="primary"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Get Started
+        </Button>
+        <Button
+          className="App-button"
+          variant="contained"
+          color="primary"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Get Started
+        </Button>
+      </div>
     </div>
   );
 }
