@@ -4,6 +4,7 @@ import Locations from './Locations';
 import { makeStyles } from '@material-ui/core/styles';
 import logo from './xandr-logo.svg';
 import './App.css';
+import SummaryCard from './SummaryCard';
 
 const useStyles = makeStyles(theme => ({
 	root: {
@@ -53,6 +54,7 @@ function App() {
 						Ad Server
 					</Button>
 				</div>
+				<SummaryCard />
 			</div>
 		</div>
 	);
