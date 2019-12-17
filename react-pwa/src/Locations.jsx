@@ -24,9 +24,13 @@ const countryOptions = _.map(CountryRegionData, country => {
 	return _.first(country);
 });
 
-export default function Locations() {
+export default function Locations(props) {
+	const {
+		selectedCountry,
+		setCountry
+	} = props;
 	const classes = useStyles();
-	const [country, setCountry] = React.useState('');
+	//const [country, setCountry] = React.useState('');
 	const [open, setOpen] = React.useState(false);
 
 	const handleChange = event => {
@@ -52,7 +56,7 @@ export default function Locations() {
 					open={open}
 					onClose={handleClose}
 					onOpen={handleOpen}
-					value={country}
+					value={selectedCountry}
 					onChange={handleChange}
 				>
 					<MenuItem value="">
