@@ -14,9 +14,9 @@ const useStyles = makeStyles(theme => ({
 	},
 }));
 
-const advertiserUrl = "https://wiki.xandr.com/display/api/Buy-Side+Services";
-const publisherUrl = "https://wiki.xandr.com/display/api/Sell-Side+Services";
-const adServerUrl = "https://wiki.xandr.com/display/api/API+Getting+Started";
+const advertiserUrl = 'https://wiki.xandr.com/display/api/Buy-Side+Services';
+const publisherUrl = 'https://wiki.xandr.com/display/api/Sell-Side+Services';
+const adServerUrl = 'https://wiki.xandr.com/display/api/API+Getting+Started';
 
 function App() {
 	const classes = useStyles();
@@ -48,21 +48,21 @@ function App() {
 					<Button
 						variant="contained"
 						color="primary"
-						onClick={() => setEntity("Advertiser")}
+						onClick={() => setEntity('Advertiser')}
 					>
             Advertiser
 					</Button>
 					<Button
 						variant="contained"
 						color="primary"
-						onClick={() => setEntity("Publisher")}
+						onClick={() => setEntity('Publisher')}
 					>
             Publisher
 					</Button>
 					<Button
 						variant="contained"
 						color="primary"
-						onClick={() => setEntity("Ad Server")}
+						onClick={() => setEntity('Ad Server')}
 					>
             Ad Server
 					</Button>

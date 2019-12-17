@@ -1,10 +1,10 @@
-import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import Card from "@material-ui/core/Card";
-import CardActions from "@material-ui/core/CardActions";
-import CardContent from "@material-ui/core/CardContent";
-import Button from "@material-ui/core/Button";
-import Typography from "@material-ui/core/Typography";
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import Card from '@material-ui/core/Card';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles({
 	card: {
@@ -12,9 +12,9 @@ const useStyles = makeStyles({
 		maxWidth: 700
 	},
 	bullet: {
-		display: "inline-block",
-		margin: "0 2px",
-		transform: "scale(0.8)"
+		display: 'inline-block',
+		margin: '0 2px',
+		transform: 'scale(0.8)'
 	},
 	title: {
 		fontSize: 14
@@ -24,6 +24,16 @@ const useStyles = makeStyles({
 	}
 });
 
+function getInfoText(entity) {
+	if(entity === 'Advertiser') {
+		return 'info text advertiser';
+	} else if (entity === 'Publisher') {
+		return 'info text publisher';
+	} else if (entity === 'Ad Server') {
+		return 'info text ad server';
+	}
+}
+
 export default function SummaryCard(props) {
 	const {
 		entity,
@@ -31,7 +41,6 @@ export default function SummaryCard(props) {
 		location
 	} = props;
 	const classes = useStyles();
-	console.log({location});
 
 	return (
 		<Card className={classes.card}>
@@ -50,8 +59,7 @@ export default function SummaryCard(props) {
 					{location}
 				</Typography>
 				<Typography variant="body2" component="p">
-          This is some information about the option you just chose, and probably
-          a link to documentation
+					{getInfoText(entity)}
 					<br />
 				</Typography>
 			</CardContent>
@@ -63,6 +71,14 @@ export default function SummaryCard(props) {
 					href={infoLink}
 				>
           Learn More
+				</Button>
+				<Button
+					size="small"
+					target="_blank"
+					rel="noopener noreferrer"
+					href={infoLink}
+				>
+          Sign Up
 				</Button>
 			</CardActions>
 		</Card>

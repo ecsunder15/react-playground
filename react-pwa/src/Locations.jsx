@@ -7,7 +7,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import {
 	CountryRegionData
-} from "react-country-region-selector";
+} from 'react-country-region-selector';
 
 const useStyles = makeStyles(theme => ({
 	button: {
@@ -30,7 +30,6 @@ export default function Locations(props) {
 		setCountry
 	} = props;
 	const classes = useStyles();
-	//const [country, setCountry] = React.useState('');
 	const [open, setOpen] = React.useState(false);
 
 	const handleChange = event => {
