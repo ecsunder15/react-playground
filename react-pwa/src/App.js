@@ -2,7 +2,7 @@ import React from 'react';
 import Button from '@material-ui/core/Button'
 import Locations from './Locations';
 import { makeStyles } from '@material-ui/core/styles';
-import logo from './xandr-logo.svg';
+import xandrLogo from './xandr-logo.svg';
 import './App.css';
 import SummaryCard from './SummaryCard';
 
@@ -36,13 +36,10 @@ function App() {
 	return (
 		<div className="App">
 			<header className="App-header">
-				<img src={logo} className="App-logo" alt="logo" />
+				<img src={xandrLogo} className="App-logo" alt="logo" />
 			</header>
 			<div className="App-body" alt="buttonGroup">
-				<Locations
-					selectedCountry={country}
-					setCountry={setCountry}
-				/>
+				<Locations selectedCountry={country} setCountry={setCountry} />
 				<div className={classes.root}>
 					<div>What kind of set up are you looking to start?</div>
 					<Button
@@ -67,11 +64,7 @@ function App() {
             Ad Server
 					</Button>
 				</div>
-				<SummaryCard
-					entity={entity}
-					infoLink={infoLink}
-					location={country}
-				/>
+				<SummaryCard entity={entity} infoLink={infoLink} location={country} />
 			</div>
 		</div>
 	);
